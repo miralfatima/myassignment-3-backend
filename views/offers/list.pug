@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/offers/add", class="btn btn-success my-10 float-right") Add New Sale Item
+    table.table
+        thead
+            tr
+                th(style="text-align:center") Number
+                th(style="text-align:center") Price
+                th(style="text-align:center") Action
+
+        tbody
+            each offer in offers
+                tr
+                    td(style="text-align:center")=offer.name
+                    td(style="text-align:center")=offer.price
+                    td(style="text-align:center")
+                        a(href="#", class="btn faas btn-Info") Avail
+
+                    br
+                   
+                    
+                       

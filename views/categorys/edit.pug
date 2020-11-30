@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1 Edit Product
+    form(action="/categorys/edit/"+category._id,method="post")
+        .form-group
+            label(for="type") Product Type
+            input#type(type="text", class="form-control", name="type" ,value=category.type)
+        .form-group
+            label(for="brand") Brand Name
+            input#brand(type="text", class="form-control", name="brand" ,value=category.brand)
+        .form-group
+            label(for="name") Product Name
+            input#name(type="text", class="form-control", name="name" ,value=category.name)
+        .form-group
+            label(for="price") Price
+            input#price(type="number", class="form-control", name="price" ,value=category       .price)
+        input(type="submit", class="btn btn-info")
+    
